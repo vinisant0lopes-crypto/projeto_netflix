@@ -1,11 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
+import Feather from '@expo/vector-icons/Feather';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      {/* Inicio da Header */}
+
+      <View style ={styles.viewHeader}>
+      
+        <Feather name="menu" size={24} color="black" />   
+        <Text style ={styles.textHeader}> TECFILMES </Text>
+        <TouchableOpacity>
+          
+        </TouchableOpacity>
+
+      </View>
+
+      {/* Inicio da barra de pesquisa */}
+
+      <View style = {styles.containerSearch}>
+      <TextInput 
+      placeholder='Digite o filme que deseja buscar'
+      ></TextInput>
+      </View>
+
+      {/* Inicio do banner */}
     
-    
+
     </View>
   );
 }
@@ -13,8 +35,30 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#cd0c0c',
     alignItems: 'center',
-    justifyContent: 'center',
   },
+
+ viewHeader:{
+  flexDirection: 'row',
+  width:'90%',
+  alignItems:'center',
+  marginTop: 10,
+  justifyContent:'space-between',
+ },
+
+ textHeader: {
+  fontSize: 25,
+  color:'white',
+  fontWeight:'bold'
+ },
+
+ containerSearch:{
+  marginTop:20,
+  width:'90%',
+  backgroundColor:'white',
+  borderRadius:5,
+  padding:8
+ }
+
 });
