@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 
 export default function App() {
   return (
+    <ScrollView>
     <View style={styles.container}>
+      
 
       {/* Inicio da Header */}
 
@@ -35,8 +37,18 @@ export default function App() {
     <Text style={styles.textBanner}> Em cartaz </Text>
 
     <Image source={require('./assets/garfeld.jpg')} style={styles.imageBanner}/>
-
+    <Image source={require('./assets/barbie_videogame.jpg')} style={styles.imageBanner}/>
+    <Image source={require('./assets/bolt_filme.jpg')} style={styles.imageBanner}/>
+    <Image source={require('./assets/cruella_filme.jpg')} style={styles.imageBanner}/>
+    <Image source={require('./assets/f1_filmes.webp')} style={styles.imageBanner}/>
+    <Image source={require('./assets/filme_dos_morto.png')} style={styles.imageBanner}/>
+    <Image source={require('./assets/gente_grande.jpg')} style={styles.imageBanner}/>
+    <Image source={require('./assets/gigante_de_aco.jpg')} style={styles.imageBanner}/>
+    <Image source={require('./assets/godzilla_movie.png')} style={styles.imageBanner}/>
+    <Image source={require('./assets/godzilla_vs_kong.jpg')} style={styles.imageBanner}/>
+    
     </View>
+    </ScrollView>
   );
 }
 
