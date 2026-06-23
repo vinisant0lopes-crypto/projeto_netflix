@@ -1,53 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
+import Banner from './src/banner/index.js'
+import Header from './src/header/index.js'
+import Search from './src/search/index.js'
+import { FlatList } from 'react-native-web';
+import Filmes from './data/filmes.js'
 
 export default function App() {
   return (
     <ScrollView>
     <View style={styles.container}>
       
-
-      {/* Inicio da Header */}
-
-      <View style ={styles.viewHeader}>
+      <Header></Header>
+      <Search></Search>
+      <Banner></Banner>
       
-        <Feather name="menu" size={24} color="white" />   
-        <Text style ={styles.textHeader}> TECFILMES </Text>
-        <TouchableOpacity>
-          
-        </TouchableOpacity>
+      <View style = {{width:'90%'}}>
+        <FlatList 
+        horizontal = {true}
+        data={Filmes}
+        keyExtractor={(item)=> item.id}
+        renderItem={({item}) => (
 
+          <TouchableOpacity>
+            <Image styles ={{width:80, height:100}} source = {{uri: item.imagem }}></Image>
+          <Text> {item.nome} </Text>
+
+          </TouchableOpacity>
+
+        )}
+        
+        
+        />
       </View>
-
-      {/* Inicio da barra de pesquisa */}
-
-      <View style = {styles.containerSearch}>
-      <TextInput 
-      placeholder='Digite o filme que deseja buscar' style={styles.inputSearch}
-      ></TextInput>
-
-      <TouchableOpacity>
-      <Feather name="search" size={24} color="black"/>
-      </TouchableOpacity>
-      </View>
-
-      {/* Inicio do banner */}
-    
-    <Text style={styles.textBanner}> Em cartaz </Text>
-
-    <Image source={require('./assets/garfeld.jpg')} style={styles.imageBanner}/>
-    <Image source={require('./assets/barbie_videogame.jpg')} style={styles.imageBanner}/>
-    <Image source={require('./assets/bolt_filme.jpg')} style={styles.imageBanner}/>
-    <Image source={require('./assets/cruella_filme.jpg')} style={styles.imageBanner}/>
-    <Image source={require('./assets/f1_filmes.webp')} style={styles.imageBanner}/>
-    <Image source={require('./assets/filme_dos_morto.png')} style={styles.imageBanner}/>
-    <Image source={require('./assets/gente_grande.jpg')} style={styles.imageBanner}/>
-    <Image source={require('./assets/gigante_de_aco.jpg')} style={styles.imageBanner}/>
-    <Image source={require('./assets/godzilla_movie.png')} style={styles.imageBanner}/>
-    <Image source={require('./assets/godzilla_vs_kong.jpg')} style={styles.imageBanner}/>
-    
+      
     </View>
+
     </ScrollView>
   );
 }
