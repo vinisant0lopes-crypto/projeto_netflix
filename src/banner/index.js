@@ -7,9 +7,7 @@ export default function Banner(){
     return(
 
         <> 
-        <Text style = {styles.textBanner}>
-            Em Cartaz
-        </Text>
+         <Text style = {styles.textBanner}> Em cartaz </Text>
 
         <Image
             source ={require("../../assets/godzilla_movie.png")}
