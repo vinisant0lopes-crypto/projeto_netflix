@@ -19,15 +19,19 @@ export default function App() {
       <View style = {{width:'90%'}}>
         <FlatList 
         horizontal = {true}
+        showsVerticalScrollIndicator= {false}
         data={Filmes}
         keyExtractor={(item)=> item.id}
         renderItem={({item}) => (
 
-          <TouchableOpacity>
-            <Image styles ={{width:80, height:100}} source = {{uri: item.imagem }}></Image>
-          <Text> {item.nome} </Text>
+           <TouchableOpacity style={styles.containerFilmes}>
 
-          </TouchableOpacity>
+          <Image style={styles.images} source={{ uri: item.imagem}} />
+                  <Text style ={styles.titulo}>{item.nome} </Text>
+                 
+                  <Text style ={styles.textNota}> {item.nota} </Text>
+
+         </TouchableOpacity>
 
         )}
         
@@ -44,54 +48,35 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cd0c0c',
-    alignItems: 'center',
+    backgroundColor: '#141a29',
+    alignItems: "center",
   },
 
- viewHeader:{
-  flexDirection: 'row',
-  width:'90%',
-  alignItems:'center',
-  marginTop: 10,
-  justifyContent:'space-between',
- },
+  containerFilmes:{
+        paddingTop:20,
+        paddingBottom:16,
+        paddingRight:16,
+        width:140,
+        heigh:28
+    },
 
- textHeader: {
-  fontSize: 25,
-  color:'white',
-  fontWeight:'bold'
- },
+    titulo:{
+        color: '#fff',
+        fontSize:12,
+        paddingTop:8  
+    },
 
- containerSearch:{
-  marginTop:20,
-  width:'90%',
-  backgroundColor:'white',
-  borderRadius:5,
-  padding:8,
-  flexDirection:'row',
-  justifyContent:'space-between',
-  alignItems:'center'
- },
+    textNota:{
+        fontSize:10,
+        color:'#fff',
+        paddingLeft:4
+    },
 
- inputSearch:{
-  height:40,
-  padding:8,
-  width:'100%'
- },
-
- imageBanner:{
-  width: 300,
-  height:400,
-  marginTop:15,
-  borderRadius:10,
- },
-
- textBanner:{
-  color:'white',
-  width:'90%',
-  fontSize:30,
-  marginTop:20,
-  fontWeight:'bold'
- }
+    images:{
+        width:'100%',
+        height:170,
+        borderRadius: 8,    
+       
+    }
 
 });
