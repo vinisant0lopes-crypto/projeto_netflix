@@ -1,15 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, ScrollView,FlatList } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 import Banner from './src/banner/index.js'
 import Header from './src/header/index.js'
+import CardMovies from './src/CardMovies/index.js';
 import Search from './src/search/index.js'
-import { FlatList } from 'react-native-web';
+
 import Filmes from './data/filmes.js'
 
 export default function App() {
   return (
-    <ScrollView>
+    
     <View style={styles.container}>
       
       <Header></Header>
@@ -24,15 +25,14 @@ export default function App() {
         keyExtractor={(item)=> item.id}
         renderItem={({item}) => (
 
-           <TouchableOpacity style={styles.containerFilmes}>
+           <CardMovies
+            titulo={item.nome}
+            imagem={item.imagem}
+            nota={item.nota}
+           />
 
-          <Image style={styles.images} source={{ uri: item.imagem}} />
-                  <Text style ={styles.titulo}>{item.nome} </Text>
-                 
-                  <Text style ={styles.textNota}> {item.nota} </Text>
-
-         </TouchableOpacity>
-
+           
+      
         )}
         
         
@@ -41,7 +41,7 @@ export default function App() {
       
     </View>
 
-    </ScrollView>
+    
   );
 }
 
