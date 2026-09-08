@@ -17,7 +17,7 @@ export default function App() {
       <Search></Search>
       <Banner></Banner>
       
-      <View style = {{width:'90%'}}>
+      <View style = {{width:'90%', height: '100%'}}>
         <FlatList 
         horizontal = {true}
         showsVerticalScrollIndicator= {false}
@@ -39,7 +39,7 @@ export default function App() {
         />
       </View>
       
-    </View>s
+    </View>
 
     
   );
