@@ -5,7 +5,7 @@ import Banner from './src/banner/index.js'
 import Header from './src/header/index.js'
 import CardMovies from './src/CardMovies/index.js';
 import Search from './src/search/index.js'
-
+import Rotas from './src/Rotas/index.js';
 import Filmes from './data/filmes.js'
 
 export default function App() {
@@ -41,7 +41,6 @@ export default function App() {
       
     </View>
 
-    
   );
 }
 
