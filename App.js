@@ -11,35 +11,7 @@ import Filmes from './data/filmes.js'
 export default function App() {
   return (
     
-    <View style={styles.container}>
-      
-      <Header></Header>
-      <Search></Search>
-      <Banner></Banner>
-      
-      <View style = {{width:'90%', height: '100%'}}>
-        <FlatList 
-        horizontal = {true}
-        showsVerticalScrollIndicator= {false}
-        data={Filmes}
-        keyExtractor={(item)=> item.id}
-        renderItem={({item}) => (
-
-           <CardMovies
-            titulo={item.nome}
-            imagem={item.imagem}
-            nota={item.nota}
-           />
-
-           
-      
-        )}
-        
-        
-        />
-      </View>
-      
-    </View>
+    <Rotas></Rotas>
 
   );
 }
