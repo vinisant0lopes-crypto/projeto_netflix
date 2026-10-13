@@ -3,7 +3,8 @@ const DATA =[
         id: 1,
         nome:'F1',
         nota:'7.6',
-        imagem:'https://image.tmdb.org/t/p/w1280/lDhZdEJ4FA6qshezJGDFDSQ20Jw.jpg'
+        imagem:'https://image.tmdb.org/t/p/w1280/lDhZdEJ4FA6qshezJGDFDSQ20Jw.jpg',
+        sinopse: 'Apelidado de “o melhor que nunca existiu”, Sonny Hayes foi o fenômeno mais promissor da Fórmula 1 na década de 1990 até que um acidente na pista quase encerrou sua carreira. Trinta anos depois, ele é um piloto nômade contratado quando é abordado por seu ex-companheiro de equipe Ruben Cervantes, dono de uma equipe de FÓRMULA 1 em dificuldades que está à beira do colapso. Ruben convence Sonny a voltar à FÓRMULA 1 para uma última chance de salvar a equipe e ser o melhor do mundo. Ele pilotará ao lado de Joshua Pearce, o melhor novato da equipe que pretende definir seu próprio ritmo. Mas à medida que os motores rugem, o passado de Sonny o alcança e ele descobre que, na FÓRMULA 1, seu companheiro de equipe é sua competição mais feroz — e o caminho para a redenção não é algo que você possa percorrer sozinho.'
     },
     {
         id: 2,

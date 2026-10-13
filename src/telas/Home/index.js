@@ -29,6 +29,7 @@ export default function Home() {
             titulo={item.nome}
             imagem={item.imagem}
             nota={item.nota}
+            sinopse={item.sinopse} style = {{}}
            />
 
            

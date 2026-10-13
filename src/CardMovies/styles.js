@@ -22,6 +22,12 @@ const styles = StyleSheet.create({
         paddingLeft:4
     },
 
+    textSinopse:{
+        fontSize:10,
+        color:'#fff',
+        paddingLeft:4
+    },
+
     images:{
         width:'100%',
         height:170,
